@@ -1,0 +1,172 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.page {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: none;
+  border: none;
+}
+
+.profile h1 {
+  margin: 16px 0 8px;
+  font-size: 24px;
+}
+
+.bio {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-card {
+  display: block;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #222;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  background: #2b7bcf;
+  color: #fff;
+}
+
+.product {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #222;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.product img {
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  flex: 0 0 110px;
+  border-radius: 18px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.product > div {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.product h2 {
+  margin: 0 0 8px;
+  font-size: clamp(16px, 4vw, 18px);
+  line-height: 1.35;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.product p {
+  margin: 0 0 14px;
+  font-size: clamp(13px, 3.5vw, 14px);
+  line-height: 1.5;
+  color: #666;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid #d6d6d6;
+  color: #666666;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.buy-btn:hover {
+  background: #2b7bcf;
+  border-color: #2b7bcf;
+  color: #ffffff;
+}
+
+.buy-btn:active {
+  transform: scale(0.97);
+}
+
+footer {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+
+@media (max-width: 360px) {
+  .product {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    flex-basis: auto;
+  }
+
+  .product > div {
+    width: 100%;
+  }
+}
